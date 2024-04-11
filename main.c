@@ -21,9 +21,11 @@ int main() {
   incrementAge(*ptr);
   printf("age = %d\n", age);  
 
+  char c[] = "ABC";
   int a[3];
   a[0] = 1;
   //int a = sizeof("a");
+  printf("Size  = %d\n", sizeof(c));
   printf("Size  = %d\n", sizeof(a));
   printf("a  = %d\n", a);
 
