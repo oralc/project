@@ -16,10 +16,10 @@ int main() {
   int age = 25;
   int *ptr = &age;
 
-  printf("adress via pointer = %d\n", ptr);
-  printf("adress via amp = %d\n", &age);
+  //printf("adress via pointer = %d\n", ptr);
+  //printf("adress via amp = %d\n", &age);
   incrementAge(*ptr);
-  printf("age = %d\n", age);  
+  /printf("age = %d\n", age);  
 
   char c[] = "ABC";
   int a[3];
