@@ -3,19 +3,37 @@
 #include <string.h>
 //strcmp > for string companre
 
-// 3 is a bad style practically since it is a magic number, could have been taken by user or sizeof
-// smelly code since names are seperated from numbers
+
+typedef struct
+{
+    string name;
+    string number;
+
+} person;
+// person is a new data type
+
+
 int main(void)
 {
-    string names[] = {"Teo", "David", "John"};
-    string numbers[] = {"+43-0755", "+1-9988", "+1-0101"};
+    person people[3];
+
+    people[0].name = "Teo";
+    people[0].number = "+43-0755";
+    //name and number is an attribute of data type
+
+    people[1].name = "David";
+    people[1].number = "+1-0758";
+
+    people[2].name = "John";
+    people[2].number = "+1-0101";
+
 
     string name = get_string("Name: ");
     for (int i = 0; i < 3; i++)
     {
-        if (strcmp(names[i], name) == 0 )
+        if (strcmp(people[i].name, name) == 0 )
         {
-            printf("Found %s \n", numbers[i]);
+            printf("Found %s \n", people[i].number);
             return 0;
         }
 
