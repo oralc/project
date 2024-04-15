@@ -1,15 +1,21 @@
+#include <cs50.h>
 #include <stdio.h>
 
+
+// linear search program
 int main(void){
-    int battleship[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
+    int numbers[] = {20, 500, 10, 5, 100, 1, 50};
 
+    int n = get_int("Number: ");
 
-    for(int i=0; i<3; i++){
-        for (int j = 0; j<3; j++){
-            printf("%d", battleship[i][j]);
+    for (int i=0; i < 7 ; i++)
+    {
+        if (numbers[i] == n){
+            printf("Found \n");
+            return 0; //indicates success
         }
-        printf("\n");
-
-
     }
+    printf("Not Found \n");
+    return 1;
+
 }
