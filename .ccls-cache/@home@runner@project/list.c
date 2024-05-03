@@ -13,10 +13,31 @@ int main(void){
     list[1] = 2;
     list[2] = 3;
 
-    for(int i = 0; i < 3; i++)
+    int *tmp = malloc(4*sizeof(int));
+    if (tmp ==NULL)
+    {
+        free(list);
+        return 1;
+    }
+
+    for (int i = 0; i < 3; i++)
+    {
+        tmp[i] = list[i];
+    }
+    tmp[3] = 4;
+
+    free(list); //now list is with garbage values
+    list = tmp;
+
+    for(int i = 0; i < 4; i++)
     {
         printf("%i\n", list[i]);
 
     }
+
+    free(list);
+    //free(tmp);
+
+    return 0;
 
 }
